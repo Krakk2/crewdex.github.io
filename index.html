@@ -1,0 +1,197 @@
+﻿<html>
+   <head>
+      <script type="text/javascript"> 
+		imageDir = "http://mvcreative.ru/example/6/2/snow/"; 
+		sflakesMax = 65; 
+		sflakesMaxActive = 65; 
+		svMaxX = 2; 
+		svMaxY = 6; 
+		ssnowStick = 1; 
+		ssnowCollect = 0; 
+		sfollowMouse = 1; 
+		sflakeBottom = 0; 
+		susePNG = 1; 
+		sflakeTypes = 5; 
+		sflakeWidth = 15; 
+		sflakeHeight = 15; 
+	</script> 
+	<script type="text/javascript" src="http://mvcreative.ru/example/6/2/snow.js"></script>
+      <meta charset="utf-8">
+	  <title>LiteSpace | Донат</title>
+	  <link rel="icon" href="favicon.png" type="image/png">
+      <link href="templates/styles/css/bootstrap-reboot.min.css" rel="stylesheet">
+      <link href="templates/styles/css/bootstrap-grid.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+      <link href="templates/styles/css/style.css" rel="stylesheet">
+	  <link rel="icon" type="image/png" href="favicon.png" />
+   </head>
+   <body>
+      <div class="container content">
+         <nav class="row align-items-center">
+            <div class="col-12 col-lg-3">
+               <a href="index.html" class="logo_div">
+               <!-- <img class="logo" src="templates/styles/img/newlogo.png"> -->
+               </a>
+            </div>
+            <div class="col-12 col-lg-9 links">
+               <a href="https://vk.com/topic-142177620_36086595">Правила</a>
+               <a href="https://vk.com/dyooxa">Администратор</a>
+               <a href="https://vk.com/litespace_mc">Группа ВКонтакте</a>
+            </div>
+         </nav>
+		<div class="row justify-content-md-center">
+   <main role="main" class="col-12 col-lg-8">
+      <div class="timer">
+         До конца скидки осталось:
+         <div class="row time justify-content-md-center" id="timer_body" data-start="00:00:00 1.01.18">
+            <div class="col-6">
+               <div class="row data">
+                  <div class="col-3"><span class="d">00</span></div>
+                  <div class="col-3"><span class="h">00</span></div>
+                  <div class="col-3"><span class="m">00</span></div>
+                  <div class="col-3"><span class="s">00</span></div>
+               </div>
+               <div class="row info">
+                  <div class="col-3">дней</div>
+                  <div class="col-3">часов</div>
+                  <div class="col-3">минут</div>
+                  <div class="col-3">секунд</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <form id="toggle_form">
+         <div class="toggle">
+            <div class="row">
+			   <div class="item col-6">
+                  <input type="radio" id="toggle_Привилегии" name="type_game" value="Привилегии" checked>
+                  <label class="label" for="toggle_Привилегии">
+                     <div class="img"><img src="templates/styles/img/fire.png"></div>
+					    <span>Привилегии</span>
+                  </label>
+               </div>
+			   
+			   									               <div class="item col-6">
+                  <input type="radio" id="toggle_Разное" name="type_game" value="Разное" >
+                  <label class="label" for="toggle_Разное">
+                     <div class="img"><img src="templates/styles/img/game.png"></div>                     <span>Скоро...</span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </form>
+		<div class="form div_toggle active" id="Привилегии">
+		<form  id="buy_group">
+            <div class="row">
+               <div class="col-6">
+                  <div class="row">
+                     <div class="col-12 col-lg-9">
+                        <input placeholder="Введите ник" type="text" name="nickname" id="nickname" required size="32">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="row">
+                     <div class="col-12 col-lg-9 offset-lg-3">
+                        <select name="sum" class="form-control" id="groups" required>
+							<option selected disabled>Выберите товар</option>
+				         </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+           
+         </form>
+			 <div class="row buy">
+               <div class="col-6">
+                  <div class="row">
+                     <div class="col-12 col-lg-9">
+                        <button onClick="window.mcdOnClick(this);" type="submit" class="button_img" name="buy_group" id="buy_group"><img class="button" src="templates/styles/img/button_n.png">
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>		 
+    
+   
+	  
+      <div class="thanks_help row justify-content-center">
+         <div class="col-12 col-lg-9">
+            <h1>Спасибо за помощь в развитии сервера!</h1>
+            <span>Покупая донат привилегию, именно Вы помогаете серверу в развитии! Именно после вашей денежной помощи увеличивается онлайн и появляются обновления! Все обновления и улучшения сервера мы делаем именно на ваши деньги!</span>
+         </div>
+      </div>
+   </main>
+</div>
+      </div>
+	   	<script type="text/javascript">
+	window.mcdCallback = function(previes){
+		//alert('Look at the console of your browser!');
+		console.log(previes);
+		
+		// Выводим список привилегий
+		var html = '';
+		for (var i = 0; i < previes.length; i++){
+			var item = previes[i] ;
+
+			// На каждую привилегию навешиваем событие, срабатывающее при нажатии мышкой. Внутри <div></div> может быть что угодно - картинка или тег.
+			html += '<option value="' + item.previ_id + '">' + item.title + ' - ' + item.price + ' руб.</option>';
+		}
+		
+		document.getElementById('groups').innerHTML = html;
+		
+		
+	}
+
+	window.mcdOnClick = function(_this){
+		
+		var previ_id = document.getElementById("groups").value;
+		var nickname = document.getElementById("nickname").value;
+			
+		// Производим перенаправление в магазин. Для этого в функцию отдаём номер привилегии
+		
+		mcdApi.setNickname(nickname);
+		mcdApi.buyPreviNative(previ_id);
+	};
+
+	</script>
+	<script type="text/javascript" src="https://mcdonate.ru/api/mcd_script.js?server_id=238939&callback=mcdCallback"></script>
+	  <script src="templates/styles/js/jquery-3.2.1.js"></script>
+      <script src="templates/styles/js/moment.min.js"></script>
+	  <script>
+	  
+	  var timer_el = {
+             d: $('#timer_body .d'),
+             h: $('#timer_body .h'),
+             m: $('#timer_body .m'),
+             s: $('#timer_body .s')
+         };
+         var tmer_n_start = {
+             d: timer_el.d.text(),
+             h: timer_el.h.text(),
+             m: timer_el.m.text(),
+             s: timer_el.s.text()
+         }
+         function timer_get(n) {
+             return parseInt(timer_el[n].text());
+         }
+         function timer_set(n, s) {
+             if (s < 10) s = '0' + s;
+             timer_el[n].text(s);
+         }
+         var timer_end = moment($('#timer_body').data('start'), "HH:mm:ss DD.MM.YY");
+         while (timer_end.diff() < 0) timer_end.add('48', 'h');
+         setInterval(function () {
+             var diff = timer_end.diff();
+             if (diff <= 0) timer_end.add('48', 'h');
+             var dur = moment.duration(diff);
+             timer_set('s', dur.seconds());
+             timer_set('m', dur.minutes());
+             timer_set('h', dur.hours());
+             timer_set('d', dur.days());
+         }, 1000);
+	  
+	  </script>
+   </body>
+</html>

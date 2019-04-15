@@ -1,0 +1,313 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #fff; }
+
+h1 {
+  font-weight: 400; }
+
+a {
+  color: inherit;
+  transition: .25s all; }
+  a:hover {
+    text-decoration: none !important;
+    color: #412f50; }
+
+@media (min-width: 992px) {
+  nav {
+    text-align: left;
+    margin-bottom: 50px !important; }
+    nav .links {
+      text-align: right;
+      margin-top: 0 !important; }
+
+  .last_buy > .col-12:last-child {
+    margin-top: 0 !important; } }
+nav {
+  margin-top: 50px;
+  margin-bottom: 75px;
+  height: 40px;
+  text-align: center; }
+  nav .site {
+    border-bottom: 1px dashed #170a22;
+    font-weight: 700; }
+  nav .links:hover a:not(:hover) {
+    color: #412f50; }
+  nav .links:hover a:hover {
+    color: white; }
+  nav .links {
+    font-weight: 500;
+    margin-top: 25px; }
+  nav .links a:not(:last-child) {
+    margin-right: 15px; }
+  nav .logo_div {
+    position: relative; }
+  nav .logo {
+    position: relative;
+    z-index: 2; }
+  nav .logo_glow {
+    position: absolute;
+    z-index: 1;
+    top: -29px;
+    left: -25px; }
+
+main {
+  text-align: center;
+  padding: 0 !important; }
+  main .timer {
+    background: #170a22;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 25px 5px;
+    position: relative; }
+    main .timer img {
+      position: absolute;
+      left: -65px;
+      height: 130%;
+      top: -15%; }
+    main .timer .time .info {
+      font-size: 16px;
+      color: #412f50; }
+    main .timer .time .data {
+      margin-top: 10px;
+      margin-bottom: -5px;
+      font-size: 40px; }
+      main .timer .time .data > div:not(:last-child)::after {
+        content: ':';
+        position: absolute;
+        left: 100%;
+        margin-left: -2.545px; }
+  main .toggle {
+    border-radius: 10px;
+    box-sizing: border-box;
+    line-height: 38px;
+    margin-bottom: 40px;
+    overflow: hidden; }
+    main .toggle .item {
+      padding: 0;
+      overflow: hidden; }
+    main .toggle .label {
+      margin: 0;
+      width: 100%;
+      display: block;
+      cursor: pointer;
+      padding: 30px 5px 25px 5px;
+      background: #170a22;
+      color: white;
+      transition: .25s all;
+      opacity: 1; }
+      main .toggle .label:hover {
+        opacity: 0.75; }
+      main .toggle .label .img {
+        margin-bottom: 15px; }
+    main .toggle input:checked + .label {
+      background: white;
+      color: #170a22; }
+    main .toggle input {
+      display: none; }
+  main .form input, main .form select {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #661f94;
+    width: 100%;
+    color: white; }
+  main .form select {
+    margin-bottom: -2px; }
+  main .form .buy {
+    margin-top: 35px; }
+    main .form .buy .button_img {
+      background: none;
+      border: none; }
+    main .form .buy .button {
+      width: 100%;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 25px;
+      transition: all 0.1s; }
+      main .form .buy .button:hover {
+        box-shadow: 0 5px 17px 0 rgba(102, 31, 148, 0.5); }
+    main .form .buy .text {
+      text-align: right; }
+  main .last_buy {
+    position: relative; }
+    main .last_buy > .col-12:last-child {
+      margin-top: 20px; }
+    main .last_buy > div img {
+      width: 100%;
+      max-height: 150px;
+      border: 2px solid #661f94;
+      border-radius: 50%;
+      margin-bottom: 10px; }
+    main .last_buy > div div {
+      font-size: 14px; }
+    main .last_buy > div span {
+      font-size: 10px; }
+  main .last_buy_title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 24px; }
+
+.thanks_help {
+  margin: 45px 0;
+  padding: 25px 5px;
+  background: #170a22;
+  border-radius: 10px;
+  position: relative; }
+  .thanks_help h1, .thanks_help span {
+    position: relative;
+    z-index: 2; }
+  .thanks_help h1 {
+    font-size: 24px; }
+  .thanks_help span {
+    font-size: 14px;
+    color: #c7c2cc; }
+  .thanks_help img {
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -45px; }
+
+.content {
+  min-height: 100vh;
+  min-height: calc(100vh - 100px); }
+
+.footer {
+  height: 50px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500; }
+  .footer span:first-child {
+    padding-right: 25px; }
+  .footer a {
+    color: #661f94;
+    border: 1px solid transparent;
+    border-bottom-color: #661f94; }
+    .footer a:hover {
+      border-width: 5px; }
+
+.div_toggle:not(.active) {
+  display: none; }
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+@media (min-width: 992px) {
+  .donate > div:nth-child(1), .donate > div:nth-child(2), .donate > div:nth-child(3), .donate > div:nth-child(4) {
+    margin-top: 0px; } }
+.donate {
+  margin-bottom: 30px; }
+  .donate > div {
+    margin-top: 30px; }
+    .donate > div:nth-child(1), .donate > div:nth-child(2) {
+      margin-top: 0px; }
+  .donate .donate_content {
+    background: #170a22;
+    background: linear-gradient(#120d20, #170a22);
+    border-radius: 5px; }
+    .donate .donate_content > div {
+      padding: 15px; }
+    .donate .donate_content .head {
+      font-size: 20px;
+      text-align: center;
+      border-bottom: 1px solid #412f50; }
+    .donate .donate_content .body {
+      font-size: 12px;
+      color: #c7c2cc; }
+      .donate .donate_content .body ul {
+        padding-left: 15px; }
+  .donate .faq {
+    text-align: center; }
+    .donate .faq img {
+      margin-top: 30px; }
+    .donate .faq .text {
+      font-size: 20px; }
+    .donate .faq .button {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 22.5px;
+      width: 230px;
+      background: #412f50;
+      padding: 12px;
+      margin-bottom: 20px; }
+      .donate .faq .button:hover {
+        background: #c7c2cc; }
+
+.contact .head {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 25px; }
+.contact .toggle .item:not(:last-child) .label {
+  border-right: 1px solid #412f50; }
+.contact .toggle .label:hover {
+  background: white;
+  color: #170a22;
+  opacity: 1; }
+.contact .toggle .img {
+  height: 51px; }
+.rules-tltle {
+  font-size: 20px;
+  font-weight: 700; }
+.body.rules {
+  line-height: 24px; }
+select option {
+  color: black; }
+select optgroup {
+  color: black; }
+.scroll {
+   height: 300px;
+  overflow-y: scroll; }
+.scroll::-webkit-scrollbar-track {
+    background: linear-gradient(#120d20, #170a22);
+}
+
+.scroll::-webkit-scrollbar {
+	width: 5px;
+    background: linear-gradient(#120d20, #170a22);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	background-color: #332441;	
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background: #170a22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: 50%;
+    margin-left: -86px;
+	font-size: 13px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */
